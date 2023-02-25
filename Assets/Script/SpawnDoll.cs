@@ -5,12 +5,13 @@ using UnityEngine;
 public class SpawnDoll : MonoBehaviour
 {
     public GameObject dollObjects;
-    // Start is called before the first frame update
+
+    // when start the game will spawn 13 dolls
     void Start()
     {
-        for(int i= 0; i< 13 ; i++)
+        for(int i = 0; i < 13 ; i++)
         {
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(0, 20), 1, Random.Range(-10, 30));
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(-18, 15), 1, Random.Range(-5, 40));
             Instantiate(dollObjects, randomSpawnPosition, Quaternion.Euler( -90, 0, 0));
         }
     }
