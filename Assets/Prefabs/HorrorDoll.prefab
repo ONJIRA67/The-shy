@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3384532}
   - component: {fileID: 2301484}
   - component: {fileID: 6407434}
-  - component: {fileID: -865749038843755039}
   - component: {fileID: 2534945705856311095}
   - component: {fileID: -8086020564459991218}
+  - component: {fileID: 2158998918108167268}
   m_Layer: 0
   m_Name: HorrorDoll
   m_TagString: Untagged
@@ -101,22 +101,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 56c8253302244df4ca65f2a7ca71b55f, type: 3}
---- !u!54 &-865749038843755039
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129278}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &2534945705856311095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -163,3 +147,19 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -3742484312079769484, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!54 &2158998918108167268
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129278}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
