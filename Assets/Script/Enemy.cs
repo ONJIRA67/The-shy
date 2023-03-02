@@ -11,17 +11,19 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
-        enemyRb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     }
 
     void Update()
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(lookDirection.x, 0f, lookDirection.z));
+        transform.rotation = lookRotation;
         enemyRb.AddForce(lookDirection * speed);
 
-        if (transform.position.y < -10)
-        {
-            Destroy(gameObject);
-        }
+
+        // if (transform.position.y < -10)
+        // {
+        //     Destroy(gameObject);
+        // }
     }
 }
