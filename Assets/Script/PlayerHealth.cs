@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Kino;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public float healthMax = 100;
     public Slider healthSlider;
     public GameObject finishPanel;
+    public AnalogGlitch GlitchEffect;
 
     void Start()
     {
@@ -32,6 +34,11 @@ public class PlayerHealth : MonoBehaviour
             if (health > 0)
             {
                 health -= value;
+            }
+            else if (health == 0)
+            {
+                finishPanel.SetActive(true);
+                GlitchEffect.GetComponent<AnalogGlitch>().enabled = false;
             }
         }
     }

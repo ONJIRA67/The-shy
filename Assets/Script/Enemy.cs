@@ -72,29 +72,13 @@ public class Enemy : MonoBehaviour
             enableDisappear = true;
             Vector3 distanceVector = other.transform.position - transform.position;
             GlitchEffect.GetComponent<AnalogGlitch>().enabled = true;
-            GlitchEffect.colorDrift = Intensity / distanceVector.magnitude;
+            GlitchEffect.scanLineJitter = Intensity / distanceVector.magnitude;
 
             // Take damage
-            if (healthPlayer != null)
-                StopCoroutine(healthPlayer);
+            if (healthPlayer != null) StopCoroutine(healthPlayer);
             damagePlayer = other.GetComponent<PlayerHealth>().RemoveHealth(damage,damageTime);
             // GetComponent<AudioSource>().Play();
             StartCoroutine(damagePlayer);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // Stop glitch
-            GlitchEffect.GetComponent<AnalogGlitch>().enabled = false;
-            GlitchEffect.colorDrift = 0;
-
-            // Recover health
-            StopCoroutine(damagePlayer);
-            healthPlayer = other.gameObject.GetComponent<PlayerHealth>().StartHealth(other.gameObject.GetComponent<PlayerHealth>().health, timeHealth);
-            StartCoroutine(healthPlayer);
         }
     }
 }

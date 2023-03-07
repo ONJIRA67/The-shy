@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class UIFollowPlayer : MonoBehaviour
 {
+    public GameObject startPanel;
+    public GameObject healthPanel;
+    public GameObject finishPanel;
     [SerializeField] private Transform player;
     [SerializeField] private Vector3 offset;
+
+    void Start()
+    {
+        healthPanel.SetActive(true);
+        finishPanel.SetActive(false);
+    }
 
     void Update()
     {
         // Health UI follows the player's view direction
-        transform.position = Camera.main.transform.position + Camera.main.transform.rotation * offset;
-        transform.rotation = Camera.main.transform.rotation;
-        transform.position = player.position;
+        transform.rotation = player.transform.rotation;
+        transform.position = player.transform.position + player.transform.rotation * offset;
     }
 }
