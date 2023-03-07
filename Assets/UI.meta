@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/UI.meta
 guid: 187754b403e85da478d1851806e2ab67
 folderAsset: yes
 DefaultImporter:
+========
+guid: dee9e089114ccf644affd55b401c91ba
+PrefabImporter:
+>>>>>>>> main:Assets/Prefabs/Canvas.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
