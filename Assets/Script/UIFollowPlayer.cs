@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UIFollowPlayer : MonoBehaviour
 {
-    public GameObject startPanel;
     public GameObject healthPanel;
     public GameObject finishPanel;
     [SerializeField] private Transform player;
