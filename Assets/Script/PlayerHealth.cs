@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public float health = 100;
     public float healthMax = 100;
     public Slider healthSlider;
+    public GameObject healthPanel;
     public GameObject finishPanel;
     public AnalogGlitch GlitchEffect;
 
@@ -39,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 finishPanel.SetActive(true);
                 GlitchEffect.GetComponent<AnalogGlitch>().enabled = false;
+                healthPanel.SetActive(false);
             }
         }
     }
