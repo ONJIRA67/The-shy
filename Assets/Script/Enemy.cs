@@ -81,4 +81,12 @@ public class Enemy : MonoBehaviour
             StartCoroutine(damagePlayer);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GlitchEffect.GetComponent<AnalogGlitch>().enabled = false;
+        }
+    }
 }
