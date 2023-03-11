@@ -1545,7 +1545,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &8442295840753681060
 BoxCollider:
@@ -1576,6 +1576,12 @@ MonoBehaviour:
   speed: 10
   stoppingDistance: 1.5
   retreatDistance: 1
+  damage: 10
+  damageTime: 1
+  enableDisappear: 0
+  timeHealth: 3
+  GlitchEffect: {fileID: 0}
+  Intensity: 0
 --- !u!82 &962636869
 AudioSource:
   m_ObjectHideFlags: 0
