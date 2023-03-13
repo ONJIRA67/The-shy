@@ -86,7 +86,10 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GlitchEffect.GetComponent<AnalogGlitch>().enabled = false;
+            if (healthPlayer == null) 
+            {
+                GlitchEffect.GetComponent<AnalogGlitch>().enabled = false;
+            }
         }
     }
 }
