@@ -11,18 +11,18 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public Button restartButton;
 
-    // public bool isGameActive;
+    public bool isGameActive;
     // public GameObject gameOverScreen;
 
-    // public void StartGame()
-    // {
-    //     isGameActive = true;
+    public void StartGame()
+    {
+        isGameActive = true;
 
-    // }
+    }
 
     public void GameOver()
     {
-        // isGameActive = false;
+        isGameActive = false;
         restartButton.gameObject.SetActive(true);
     }
 
