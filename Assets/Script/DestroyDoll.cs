@@ -17,7 +17,7 @@ public class DestroyDoll : MonoBehaviour
         {
             Destroy(other.gameObject);
             countDoll+=1;
-            doll.text = countDoll.ToString()+ "/10";
+            doll.text = countDoll.ToString()+ "/13";
         }
     }
 
