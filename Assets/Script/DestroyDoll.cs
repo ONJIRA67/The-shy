@@ -20,6 +20,10 @@ public class DestroyDoll : MonoBehaviour
             doll.text = countDoll.ToString()+ "/13";
         }
     }
+    public void SetCountDoll()
+    {
+        countDoll = 0;
+    }
 
     // Update is called once per frame
     
