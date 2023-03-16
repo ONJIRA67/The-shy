@@ -7,15 +7,20 @@ public class SetHealth : MonoBehaviour
 {
     public Slider healthSlider;
     public Button restartBtn;
+    public PlayerHealth play;
+    public GameObject healthPanel;
     
-    void Start()
-    {
-        restartBtn.onClick.AddListener(HealthOnClick);
-    }
+    // void Start()
+    // {
+    //     restartBtn.onClick.AddListener(play.StartHealth);
+    // }
 
     public void HealthOnClick()
     {
         // Debug.Log("Button clicked.");
-        healthSlider.GetComponent<Slider>().value = 100;
+        float health = 100;
+        healthSlider.GetComponent<Slider>().maxValue = health;
+        healthSlider.GetComponent<Slider>().value = health;
+        healthPanel.SetActive(true);   
     }
 }

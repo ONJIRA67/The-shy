@@ -7,27 +7,33 @@ using UnityEngine.SceneManagement;
 
 public class SetRecordTime : MonoBehaviour
 {
-    public float levelTime = 0.0f;
+    public float levelTime;
     public bool updateTimer = false;
-    public TextMeshProUGUI timer;
+    public TextMeshProUGUI finishTime;   
+    public TextMeshProUGUI winTime;   
+    // public PlayerHealth player;
     // Start is called before the first frame update
-    void Start()
+    public void StartTime()
     {
         updateTimer = true;
         levelTime = 0.0f;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (updateTimer)
             levelTime += Time.deltaTime;
+
+            
     }
 
-    void LevelEnded()
+    public void LevelEnded()
     {
+        Debug.Log(levelTime);
         updateTimer = false;
-        timer.text += levelTime.ToString()+"\n";
-        levelTime = 0.0f;
+        finishTime.text = levelTime.ToString("F2");
+        winTime.text = levelTime.ToString("F2");
+        
     }
 }
