@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealthOnClick()
     {
-        Debug.Log(health);
+        // Debug.Log(health);
         // float health = 100;
         // healthSlider.GetComponent<Slider>().maxValue = health;
         // healthSlider.GetComponent<Slider>().value = health;
@@ -41,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
         health = healthMax;
         healthSlider.GetComponent<Slider>().maxValue = healthMax;
         healthSlider.GetComponent<Slider>().value = health;
-        Debug.Log("Healt update" + health);
+        // Debug.Log("Healt update" + health);
     }
 
     public IEnumerator RemoveHealth(float value, float time)
@@ -61,7 +61,6 @@ public class PlayerHealth : MonoBehaviour
             else if (health == 0)
             {
                 finishPanel.SetActive(true);
-                //float record = RecTime.Update();
                 RecTime.LevelEnded();
                 GlitchEffect.GetComponent<AnalogGlitch>().enabled = false;
                 healthPanel.SetActive(false);   
