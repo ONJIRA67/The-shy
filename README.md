@@ -25,3 +25,9 @@ Installation
   - Install the SteamVR plugin for Unity. You can do this by navigating to the Unity Asset Store within the Unity Editor and searching for "SteamVR Plugin".
   - Connect your HTC Vive headset and controllers to your PC and make sure they are set up and working properly with the HTC Vive software.
   - Open project name "The-shy"
+
+Created by
+  - Onjira Krataithong
+  - Kanchanit Bunma
+  - Chisanu Saenrod
+  - Techatorn Karunwong
